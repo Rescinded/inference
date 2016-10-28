@@ -1,0 +1,1 @@
+json.partial! "create_surveys/create_survey", create_survey: @create_survey

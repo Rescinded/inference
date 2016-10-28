@@ -1,0 +1,29 @@
+<h1>Listing create_surveys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @create_surveys.each do |create_survey| %>
+      <tr>
+        <td><%= create_survey.title %></td>
+        <td><%= create_survey.description %></td>
+        <td><%= create_survey.user %></td>
+        <td><%= link_to 'Show', create_survey %></td>
+        <td><%= link_to 'Edit', edit_create_survey_path(create_survey) %></td>
+        <td><%= link_to 'Destroy', create_survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Create survey', new_create_survey_path %>
